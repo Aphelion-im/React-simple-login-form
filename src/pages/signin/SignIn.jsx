@@ -68,6 +68,7 @@ export default function SignIn() {
               }}
               register={register}
               errors={errors}
+              autoFocus
             />
 
             {/* Password component*/}

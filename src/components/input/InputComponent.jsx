@@ -11,7 +11,8 @@ export default function InputComponent({
   validationRules,
   register,
   errors,
-  iconName
+  iconName,
+  autoFocus
 }) {
   return (
     <>
@@ -24,6 +25,7 @@ export default function InputComponent({
           id={inputId}
           placeholder={placeholder}
           {...register(inputName, validationRules)}
+          autoFocus={autoFocus}
         />
       </div>
       <div className="error-message">
