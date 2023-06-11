@@ -12,11 +12,61 @@ button {
   cursor: pointer;
   padding: 1rem 2rem;
   font-weight: 700;
-  text-transform:uppercase;
+  text-transform: uppercase;
 }
 
 button:hover {
   filter: brightness(110%);
 }
 
+.forgotpasswordtext {
+  text-decoration: underline;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+/* Data attribute tooltip */
+[data-title] {
+  position: relative;
+}
+
+[data-title]:hover::after,
+[data-title]:hover::before {
+  opacity: 1;
+  transition: all 250ms ease-in;
+  visibility: visible;
+}
+
+[data-title]::after {
+  border: 3px solid #666666;
+  color: #fff;
+  content: attr(data-title);
+  position: absolute;
+  bottom: -1.6em;
+  left: 50%;
+  transform: translate(-50%, 28px); /* Adjust Y to lower tooltip */
+  padding: 8px 16px;
+  white-space: nowrap;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  background-color: #262626;
+  opacity: 0;
+  z-index: 99999;
+  visibility: hidden;
+}
+
+[data-title]::before {
+  content: " ";
+  position: absolute;
+  bottom: -13px; 
+  left: 50%;
+  margin-left: -15px;
+  border-width: 15px;
+  border-style: solid;
+  border-color: transparent transparent #262626 transparent;
+  opacity: 0;
+  z-index: 99999;
+  visibility: hidden;
+}
 

@@ -2,6 +2,8 @@
 // https://www.npmjs.com/package/react-hook-form
 // https://react-hook-form.com/get-started/
 // Registreren. Zie pattern bij Password: https://www.freecodecamp.org/news/add-form-validation-in-react-app-with-react-hook-form/
+// Styling tooltip: https://www.w3docs.com/tools/code-editor/10124 & https://www.w3docs.com/snippets/css/how-to-change-the-style-of-the-title-attribute-inside-an-anchor-tag.html
+
 
 import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
@@ -37,9 +39,7 @@ export default function SignIn() {
           <h1>Sign In</h1>
 
           {success ? (
-            <p style={{ color: 'green' }}>
-              You have successfully logged in
-            </p>
+            <p style={{ color: 'green' }}>You have successfully logged in</p>
           ) : (
             <p>Sign in for existing users</p>
           )}
@@ -92,6 +92,12 @@ export default function SignIn() {
             >
               Sign In
             </button>
+            <p
+              className="forgotpasswordtext"
+              data-title="This functionality has been disabled for this demo"
+            >
+              Forgot password?
+            </p>
           </form>
         </div>
       </section>
